@@ -1,6 +1,6 @@
-package com.springboot.hibernateAndJpaDemo.DataAccessLayer.Implements;
+package com.springboot.hibernateAndJpaDemo.repositories.impl;
 
-import com.springboot.hibernateAndJpaDemo.DataAccessLayer.IStudentDal;
+import com.springboot.hibernateAndJpaDemo.repositories.IStudentDal;
 import com.springboot.hibernateAndJpaDemo.entities.Student;
 import jakarta.persistence.EntityManager;
 
@@ -12,12 +12,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-public class StudentDal implements IStudentDal {
+public class StudentRepository implements IStudentDal {
 
     private EntityManager entityManager;
 
     @Autowired
-    public StudentDal(EntityManager entityManager) {
+    public StudentRepository(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 

@@ -1,6 +1,6 @@
-package com.springboot.hibernateAndJpaDemo.restApi;
+package com.springboot.hibernateAndJpaDemo.controllers;
 
-import com.springboot.hibernateAndJpaDemo.Service.IStudentManager;
+import com.springboot.hibernateAndJpaDemo.services.IStudentService;
 import com.springboot.hibernateAndJpaDemo.entities.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +11,10 @@ import java.util.List;
 @RequestMapping("/api")
 public class StudentController {
 
-    private IStudentManager studentManager;
+    private IStudentService studentManager;
 
     @Autowired
-    public StudentController(IStudentManager studentManager) {
+    public StudentController(IStudentService studentManager) {
         this.studentManager = studentManager;
     }
 
